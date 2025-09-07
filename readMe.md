@@ -1,3 +1,7 @@
+# Python String Methods Cheatsheet
+
+## Basic String Operations
+
 | Operation        | Example                   | Result          |
 | ---------------- | ------------------------- | --------------- |
 | Get length       | `len("Hello")`            | `5`             |
@@ -7,8 +11,9 @@
 | Concatenation    | `"Hello" + " " + "World"` | `'Hello World'` |
 | Repetition       | `"Hi" * 3`                | `'HiHiHi'`      |
 
+---
 
-
+## Case Conversion Methods
 
 | Method          | Description                          | Example                 | Result          |
 | --------------- | ------------------------------------ | ----------------------- | --------------- |
@@ -18,7 +23,9 @@
 | `.capitalize()` | Capitalize first letter of string    | `"hello".capitalize()`  | `'Hello'`       |
 | `.swapcase()`   | Swap case of each letter             | `"Hello".swapcase()`    | `'hELLO'`       |
 
+---
 
+## Validation Methods
 
 | Method       | Description                     | Example                   | Result |
 | ------------ | ------------------------------- | ------------------------- | ------ |
@@ -30,8 +37,9 @@
 | `.isupper()` | All uppercase                   | `"ABC".isupper()`         | `True` |
 | `.istitle()` | Each word starts with uppercase | `"Hello World".istitle()` | `True` |
 
+---
 
-
+## Modification Methods
 
 | Method               | Description                  | Example                    | Result          |
 | -------------------- | ---------------------------- | -------------------------- | --------------- |
@@ -43,18 +51,9 @@
 | `.rsplit(sep)`       | Split from right             | `"a,b,c".rsplit(",",1)`    | `['a,b','c']`   |
 | `.join(iterable)`    | Join list to string          | `",".join(["a","b","c"])`  | `'a,b,c'`       |
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
+## Search & Check Methods
 
 | Method             | Description                              | Example                    | Result |
 | ------------------ | ---------------------------------------- | -------------------------- | ------ |
@@ -64,5 +63,3 @@
 | `.count(sub)`      | Count occurrences                        | `"hello".count("l")`       | `2`    |
 | `.startswith(sub)` | Check start                              | `"hello".startswith("he")` | `True` |
 | `.endswith(sub)`   | Check end                                | `"hello".endswith("lo")`   | `True` |
-
-
