@@ -63,3 +63,16 @@
 | `.count(sub)`      | Count occurrences                        | `"hello".count("l")`       | `2`    |
 | `.startswith(sub)` | Check start                              | `"hello".startswith("he")` | `True` |
 | `.endswith(sub)`   | Check end                                | `"hello".endswith("lo")`   | `True` |
+
+
+# Git/GitHub Cheatsheet for Uploading Projects
+
+## Initialize Repository
+
+```bash
+
+    git init                 # Initialize a local Git repository
+    git status               # Check the status of files
+    git add .                # Stage all changes
+    git commit -m "message"  # Commit changes with a message
+    git push -u origin main  # Push local commits to GitHub (first time)
