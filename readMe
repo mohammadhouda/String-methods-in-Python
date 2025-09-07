@@ -1,0 +1,68 @@
+| Operation        | Example                   | Result          |
+| ---------------- | ------------------------- | --------------- |
+| Get length       | `len("Hello")`            | `5`             |
+| Access character | `"Hello"[0]`              | `'H'`           |
+| Slicing          | `"Hello"[1:4]`            | `'ell'`         |
+| Reverse string   | `"Hello"[::-1]`           | `'olleH'`       |
+| Concatenation    | `"Hello" + " " + "World"` | `'Hello World'` |
+| Repetition       | `"Hi" * 3`                | `'HiHiHi'`      |
+
+
+
+
+| Method          | Description                          | Example                 | Result          |
+| --------------- | ------------------------------------ | ----------------------- | --------------- |
+| `.upper()`      | Convert to uppercase                 | `"hello".upper()`       | `'HELLO'`       |
+| `.lower()`      | Convert to lowercase                 | `"HELLO".lower()`       | `'hello'`       |
+| `.title()`      | Capitalize first letter of each word | `"hello world".title()` | `'Hello World'` |
+| `.capitalize()` | Capitalize first letter of string    | `"hello".capitalize()`  | `'Hello'`       |
+| `.swapcase()`   | Swap case of each letter             | `"Hello".swapcase()`    | `'hELLO'`       |
+
+
+
+| Method       | Description                     | Example                   | Result |
+| ------------ | ------------------------------- | ------------------------- | ------ |
+| `.isalpha()` | Only letters                    | `"abc".isalpha()`         | `True` |
+| `.isdigit()` | Only digits                     | `"123".isdigit()`         | `True` |
+| `.isalnum()` | Letters & digits                | `"abc123".isalnum()`      | `True` |
+| `.isspace()` | Only whitespace                 | `" ".isspace()`           | `True` |
+| `.islower()` | All lowercase                   | `"abc".islower()`         | `True` |
+| `.isupper()` | All uppercase                   | `"ABC".isupper()`         | `True` |
+| `.istitle()` | Each word starts with uppercase | `"Hello World".istitle()` | `True` |
+
+
+
+
+| Method               | Description                  | Example                    | Result          |
+| -------------------- | ---------------------------- | -------------------------- | --------------- |
+| `.strip()`           | Remove spaces from both ends | `"  hello  ".strip()`      | `'hello'`       |
+| `.lstrip()`          | Remove left spaces           | `"  hello".lstrip()`       | `'hello'`       |
+| `.rstrip()`          | Remove right spaces          | `"hello  ".rstrip()`       | `'hello'`       |
+| `.replace(old, new)` | Replace substring            | `"hello".replace("l","L")` | `'heLLo'`       |
+| `.split(sep)`        | Split into list              | `"a,b,c".split(",")`       | `['a','b','c']` |
+| `.rsplit(sep)`       | Split from right             | `"a,b,c".rsplit(",",1)`    | `['a,b','c']`   |
+| `.join(iterable)`    | Join list to string          | `",".join(["a","b","c"])`  | `'a,b,c'`       |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Method             | Description                              | Example                    | Result |
+| ------------------ | ---------------------------------------- | -------------------------- | ------ |
+| `.find(sub)`       | First index of `sub`                     | `"hello".find("l")`        | `2`    |
+| `.rfind(sub)`      | Last index of `sub`                      | `"hello".rfind("l")`       | `3`    |
+| `.index(sub)`      | Like find, but raises error if not found | `"hello".index("l")`       | `2`    |
+| `.count(sub)`      | Count occurrences                        | `"hello".count("l")`       | `2`    |
+| `.startswith(sub)` | Check start                              | `"hello".startswith("he")` | `True` |
+| `.endswith(sub)`   | Check end                                | `"hello".endswith("lo")`   | `True` |
+
+
