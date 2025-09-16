@@ -1,78 +1,38 @@
-# Python String Methods Cheatsheet
+# Python List (Array) Methods Cheat Sheet 📋
 
-## Basic String Operations
-
-| Operation        | Example                   | Result          |
-| ---------------- | ------------------------- | --------------- |
-| Get length       | `len("Hello")`            | `5`             |
-| Access character | `"Hello"[0]`              | `'H'`           |
-| Slicing          | `"Hello"[1:4]`            | `'ell'`         |
-| Reverse string   | `"Hello"[::-1]`           | `'olleH'`       |
-| Concatenation    | `"Hello" + " " + "World"` | `'Hello World'` |
-| Repetition       | `"Hi" * 3`                | `'HiHiHi'`      |
+This is a quick-reference guide to all the standard methods for Python's `list` object, along with common built-in functions used with lists.
 
 ---
 
-## Case Conversion Methods
+## List Methods
 
-| Method          | Description                          | Example                 | Result          |
-| --------------- | ------------------------------------ | ----------------------- | --------------- |
-| `.upper()`      | Convert to uppercase                 | `"hello".upper()`       | `'HELLO'`       |
-| `.lower()`      | Convert to lowercase                 | `"HELLO".lower()`       | `'hello'`       |
-| `.title()`      | Capitalize first letter of each word | `"hello world".title()` | `'Hello World'` |
-| `.capitalize()` | Capitalize first letter of string    | `"hello".capitalize()`  | `'Hello'`       |
-| `.swapcase()`   | Swap case of each letter             | `"Hello".swapcase()`    | `'hELLO'`       |
+These methods are called directly on a list object (e.g., `my_list.append()`).
 
----
-
-## Validation Methods
-
-| Method       | Description                     | Example                   | Result |
-| ------------ | ------------------------------- | ------------------------- | ------ |
-| `.isalpha()` | Only letters                    | `"abc".isalpha()`         | `True` |
-| `.isdigit()` | Only digits                     | `"123".isdigit()`         | `True` |
-| `.isalnum()` | Letters & digits                | `"abc123".isalnum()`      | `True` |
-| `.isspace()` | Only whitespace                 | `" ".isspace()`           | `True` |
-| `.islower()` | All lowercase                   | `"abc".islower()`         | `True` |
-| `.isupper()` | All uppercase                   | `"ABC".isupper()`         | `True` |
-| `.istitle()` | Each word starts with uppercase | `"Hello World".istitle()` | `True` |
+| Method Syntax                          | Description                                                                                             | Example                                                                                                  |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **`list.append(item)`** | Adds a single item to the **end** of the list. Modifies the list **in-place**.                          | `L = [1, 2]` <br> `L.append(3)` <br> `L` is now `[1, 2, 3]`                                                |
+| **`list.extend(iterable)`** | Appends all items from an iterable (e.g., another list) to the end. Modifies the list **in-place**.     | `L = [1, 2]` <br> `L.extend([3, 4])` <br> `L` is now `[1, 2, 3, 4]`                                        |
+| **`list.insert(index, item)`** | Inserts an item at a specific position. Modifies the list **in-place**.                                 | `L = [1, 3]` <br> `L.insert(1, 2)` <br> `L` is now `[1, 2, 3]`                                             |
+| **`list.remove(item)`** | Removes the **first** matching item from the list. Raises `ValueError` if the item isn't found.           | `L = [1, 2, 2]` <br> `L.remove(2)` <br> `L` is now `[1, 2]`                                                |
+| **`list.pop([index])`** | Removes and **returns** the item at the given index. If no index, removes and returns the **last** item.  | `L = [1, 2, 3]` <br> `x = L.pop(1)` <br> `x` is `2`, `L` is `[1, 3]`                                         |
+| **`list.clear()`** | Removes all items from the list. Modifies the list **in-place**.                                        | `L = [1, 2, 3]` <br> `L.clear()` <br> `L` is now `[]`                                                      |
+| **`list.index(item, [start], [end])`** | Returns the index of the **first** matching item. Raises `ValueError` if not found.                     | `L = [1, 2, 3]` <br> `L.index(2)` returns `1`                                                             |
+| **`list.count(item)`** | Returns the number of times an item appears in the list.                                                | `L = [1, 2, 2]` <br> `L.count(2)` returns `2`                                                             |
+| **`list.sort(key=None, reverse=False)`** | Sorts the list **in-place**. Use `key` for custom sorting and `reverse=True` for descending order.      | `L = [3, 1, 2]` <br> `L.sort()` <br> `L` is now `[1, 2, 3]`                                                |
+| **`list.reverse()`** | Reverses the order of elements **in-place**.                                                            | `L = [1, 2, 3]` <br> `L.reverse()` <br> `L` is now `[3, 2, 1]`                                             |
+| **`list.copy()`** | Returns a **shallow copy** of the list.                                                                 | `L1 = [1, 2]` <br> `L2 = L1.copy()` <br> `L2.append(3)` <br> `L1` is `[1, 2]`, `L2` is `[1, 2, 3]`           |
 
 ---
 
-## Modification Methods
+## Related Built-in Functions
 
-| Method               | Description                  | Example                    | Result          |
-| -------------------- | ---------------------------- | -------------------------- | --------------- |
-| `.strip()`           | Remove spaces from both ends | `"  hello  ".strip()`      | `'hello'`       |
-| `.lstrip()`          | Remove left spaces           | `"  hello".lstrip()`       | `'hello'`       |
-| `.rstrip()`          | Remove right spaces          | `"hello  ".rstrip()`       | `'hello'`       |
-| `.replace(old, new)` | Replace substring            | `"hello".replace("l","L")` | `'heLLo'`       |
-| `.split(sep)`        | Split into list              | `"a,b,c".split(",")`       | `['a','b','c']` |
-| `.rsplit(sep)`       | Split from right             | `"a,b,c".rsplit(",",1)`    | `['a,b','c']`   |
-| `.join(iterable)`    | Join list to string          | `",".join(["a","b","c"])`  | `'a,b,c'`       |
+These functions are not methods but are commonly used with lists.
 
----
-
-## Search & Check Methods
-
-| Method             | Description                              | Example                    | Result |
-| ------------------ | ---------------------------------------- | -------------------------- | ------ |
-| `.find(sub)`       | First index of `sub`                     | `"hello".find("l")`        | `2`    |
-| `.rfind(sub)`      | Last index of `sub`                      | `"hello".rfind("l")`       | `3`    |
-| `.index(sub)`      | Like find, but raises error if not found | `"hello".index("l")`       | `2`    |
-| `.count(sub)`      | Count occurrences                        | `"hello".count("l")`       | `2`    |
-| `.startswith(sub)` | Check start                              | `"hello".startswith("he")` | `True` |
-| `.endswith(sub)`   | Check end                                | `"hello".endswith("lo")`   | `True` |
-
-
-# Git/GitHub Cheatsheet for Uploading Projects
-
-## Initialize Repository
-
-```bash
-
-    git init                 # Initialize a local Git repository
-    git status               # Check the status of files
-    git add .                # Stage all changes
-    git commit -m "message"  # Commit changes with a message
-    git push -u origin main  # Push local commits to GitHub (first time)
+| Function Syntax        | Description                                                                          | Example                                                                          |
+| ---------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| **`len(list)`** | Returns the number of items in the list.                                             | `len([1, 2, 3])` returns `3`                                                     |
+| **`sorted(iterable)`** | Returns a **new sorted list** from an iterable, leaving the original unchanged.        | `L = [3, 1, 2]` <br> `sorted(L)` returns `[1, 2, 3]`. `L` is still `[3, 1, 2]`     |
+| **`min(list)`** | Returns the smallest item in the list.                                               | `min([3, 1, 2])` returns `1`                                                     |
+| **`max(list)`** | Returns the largest item in the list.                                                | `max([3, 1, 2])` returns `3`                                                     |
+| **`sum(list)`** | Returns the sum of all items in the list (items must be numbers).                    | `sum([1, 2, 3])` returns `6`                                                     |
+| **`enumerate(list)`** | Returns an enumerate object containing pairs of (index, value) for each item.        | `list(enumerate(['a', 'b']))` returns `[(0, 'a'), (1, 'b')]`                     |
